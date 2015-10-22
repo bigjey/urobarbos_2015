@@ -1,0 +1,13 @@
+<a href="#project/<%= url %>" class="block <%= ['in-left', 'in-right', 'in-top', 'in-bottom'][Math.floor(Math.random()*4)] %>" style="
+	background-color: <%= bgColor %>;
+	width: <%= css.width %>px;
+	height: <%= css.height %>px;
+	left: <%= css.left %>px;
+	top: <%= css.top %>px;
+" data-row="<%= data.row%>" data-col="<%= data.col%>">
+	<span class="text">
+		<span class="title"><%= title %></span>
+		<span class="description"><%= subtitle %></span>
+	</span>
+	<span class="image" style="background-image: url(<%= bgImage %>);"></span>
+</a>

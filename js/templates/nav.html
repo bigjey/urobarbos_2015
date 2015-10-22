@@ -1,0 +1,25 @@
+<a class="i-close" data-dismiss="nav"></a>
+
+<a href="#" class="i-logo"></a>
+
+<div class="logos">
+  <% _.each(window.projectsCollection.models, function(project){ %>
+  <div data-id="<%= project.id %>" class="img" style="background-image: url(<%= project.get('preview') %>); background-color: <%= project.get('bgColor') %>;"></div>
+  <% }) %>
+</div>
+
+<div class="columns">
+
+  <div class="label"><a href="#portfolio"><%= siteSettings.labels.projects %></a></div>
+
+  <ul class="projects">
+    <% _.each(window.projectsCollection.models, function(project){ %>
+    <li data-img-id="<%= project.id %>">
+    	<a href="#project/<%= project.id %>"><%= project.get('title') %></a>
+    </li>
+    <% }) %>
+  </ul>
+
+  <div class="label"><a href="#about"><%= siteSettings.labels.about %></a></div>
+
+</div>
